@@ -24,7 +24,7 @@ yarn build
 ## Packaging
 
 ```bash
-npx svelte-kit package
+yarn package
 ```
 
 Now you can publish to NPM registry entering the `package` folder and running `yarn publish`
