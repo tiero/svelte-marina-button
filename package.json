@@ -31,5 +31,9 @@
 	"type": "module",
 	"dependencies": {
 		"marina-provider": "^1.4.3"
+	},
+	"author": {
+		"name": "Marco Argentieri",
+		"url": "https://tiero.github.io"
 	}
 }
