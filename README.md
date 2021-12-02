@@ -21,10 +21,19 @@ yarn build
 
 > You can preview the built app with `yarn preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
 
-## Packaging
+## Release
+
+1. Increment the version and commit
 
 ```bash
-yarn package
+npm version patch
 ```
 
-Now you can publish to NPM registry entering the `package` folder and running `yarn publish`
+2. Package the library
+
+```bash
+npm run package
+```
+
+Now you can publish to NPM registry entering the `package` folder and running `npm publish`
+
