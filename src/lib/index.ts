@@ -7,6 +7,11 @@ declare global {
 	}
 }
 
+export interface MarinaStore {
+	installed: boolean;
+	enabled: boolean;
+	network: string;
+}
+
 export default Connect;
-export * from './type';
 export * from './marinaStore.js';
