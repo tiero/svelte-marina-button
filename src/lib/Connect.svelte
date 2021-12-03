@@ -7,7 +7,8 @@
 
 	import { onMount, onDestroy } from 'svelte';
 	import { detectProvider } from 'marina-provider';
-	import { marinaStore, MarinaStore } from './marinaStore';
+	import { marinaStore } from './marinaStore';
+	import type { MarinaStore } from './';
 	$: installed = false;
 	$: enabled = false;
 	const unsubscribe = marinaStore.subscribe((s: MarinaStore) => {
