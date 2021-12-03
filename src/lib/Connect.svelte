@@ -39,11 +39,9 @@
 		marinaStore.update((s: MarinaStore) => ({ ...s, network: network }));
 	};
 	const onClick = () => {
-		if (!installed)
-			window.open('https://vulpem.com/marina');
-		else
-			connect();
-	}
+		if (!installed) window.open('https://vulpem.com/marina');
+		else connect();
+	};
 	onMount(async () => {
 		// detect provider
 		const marina = await detectProvider('marina');

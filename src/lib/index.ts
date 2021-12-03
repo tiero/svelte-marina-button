@@ -7,5 +7,6 @@ declare global {
 	}
 }
 
-export * from './marinaStore';
 export default Connect;
+export * from './type';
+export * from './marinaStore.js';

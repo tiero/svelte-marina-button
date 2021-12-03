@@ -1,8 +1,25 @@
 # Marina Connect button component for Svelte
 
+## Example
+
+Add to your svelte app
+
+```tsx
+import Connect, { marinaStore, MarinaStore } from 'svelte-marina-button';
+
+// You can subscribe to marina status changes
+marinaStore.subscribe((s: MarinaStore) => {
+	console.log(s.network);
+	console.log(s.installed);
+});
+
+// you can pass optional cssClass to style your button
+<Connect cssClass={'special-button-css'} />;
+```
+
 ## Developing
 
-Test the library with an example page 
+Test the library with an example page
 
 ```bash
 yarn dev
@@ -36,4 +53,3 @@ npm run package
 ```
 
 Now you can publish to NPM registry entering the `package` folder and running `npm publish`
-
