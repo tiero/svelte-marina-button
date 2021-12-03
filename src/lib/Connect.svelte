@@ -1,4 +1,10 @@
 <script lang="ts">
+	//props
+	export let cssClass = 'button is-rounded is-primary';
+
+	// state
+	let buttonText = 'Install Marina';
+
 	import { onMount, onDestroy } from 'svelte';
 	import { detectProvider } from 'marina-provider';
 	import { marinaStore, MarinaStore } from './marinaStore';
@@ -7,6 +13,14 @@
 	const unsubscribe = marinaStore.subscribe((s: MarinaStore) => {
 		installed = s.installed;
 		enabled = s.enabled;
+
+		if (!installed) return;
+
+		if (!enabled) {
+			buttonText = 'Connect with Marina';
+		} else {
+			buttonText = 'Disconnect';
+		}
 	});
 	const connect = async () => {
 		if (!enabled) await window.marina.enable();
@@ -24,6 +38,12 @@
 	const notifyNetworkChange = (network: string) => {
 		marinaStore.update((s: MarinaStore) => ({ ...s, network: network }));
 	};
+	const onClick = () => {
+		if (!installed)
+			window.open('https://vulpem.com/marina');
+		else
+			connect();
+	}
 	onMount(async () => {
 		// detect provider
 		const marina = await detectProvider('marina');
@@ -57,15 +77,6 @@
 	onDestroy(unsubscribe);
 </script>
 
-{#if !installed}
-	<button
-		class="button is-rounded is-primary"
-		on:click={() => window.open('https://vulpem.com/marina')}
-	>
-		Install Marina
-	</button>
-{:else if !enabled}
-	<button class="button is-rounded is-primary" on:click={connect}> Connect with Marina </button>
-{:else}
-	<button class="button is-rounded is-primary" on:click={connect}> Disconnect </button>
-{/if}
+<button class={cssClass} on:click={onClick}>
+	{buttonText}
+</button>
