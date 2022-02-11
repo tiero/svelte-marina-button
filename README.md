@@ -1,5 +1,14 @@
 # Marina Connect button component for Svelte
 
+## Install
+
+```sh
+npm install -S svelte-marina-button
+// or with yarn
+yarn add svelte-marina-button
+```
+
+
 ## Example
 
 Add to your svelte app
