@@ -30,7 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"marina-provider": "^1.4.3"
+		"marina-provider": "^1.6.0"
 	},
 	"author": {
 		"name": "Marco Argentieri",

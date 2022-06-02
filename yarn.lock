@@ -1016,10 +1016,10 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
-marina-provider@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/marina-provider/-/marina-provider-1.4.3.tgz#15e51c989569e96088a74916ff195e03fc0b05c8"
-  integrity sha512-FXeJ61q+arMUEdR7GeXLmT/Xx8w1NP5vmkztkBIeSmRFvs02qjJO6GqutEUnVFWUzC3QQSB45yiOo8+i8ohYZw==
+marina-provider@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/marina-provider/-/marina-provider-1.6.0.tgz#51835435c126e7ba88b1e314ae9f41d3dbbd3e68"
+  integrity sha512-y861rs5p28z5bEq0zSTc7LDKWM6a2qNhlRw8y1HVFv9rfs1R6Cv7GfKL60g/8hQvIWY4XmH8jrmZy+h7ELTOqQ==
 
 merge2@^1.3.0:
   version "1.4.1"
